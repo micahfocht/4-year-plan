@@ -12,6 +12,8 @@ jobs:
     steps:      
       - name: parent working directory
         run: pwd
+      - name: list folder contents
+        run: ls /home/runner/work/4-year-plan/4-year-plan 
       - name: Copy folder content recursively to remote
         uses: garygrossgarten/github-action-scp@release
         with:
