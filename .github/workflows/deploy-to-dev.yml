@@ -17,8 +17,8 @@ jobs:
       - name: Copy folder content recursively to remote
         uses: garygrossgarten/github-action-scp@release
         with:
-          local: /home/runner/work/4-year-plan/4-year-plan/src
-          remote: /var/www/dev/html
+          local: /home/runner/work/4-year-plan/4-year-plan/src/index.php
+          remote: /var/www/dev/html/index.php
           host: ${{ secrets.HOST }}
           username: ${{ secrets.SSH_USER }}
           privateKey: ${{ secrets.PRIVATE_KEY}}
