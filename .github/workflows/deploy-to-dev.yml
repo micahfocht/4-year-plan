@@ -10,15 +10,13 @@ jobs:
       CI: true
       LOCAL: test
     steps:      
-      - name: parent working directory
-        run: pwd
-      - name: list folder contents
-        run: ls /home/runner/work/4-year-plan/4-year-plan 
+      - name: checkout
+        uses: actions/checkout@v2
       - name: Copy folder content recursively to remote
         uses: garygrossgarten/github-action-scp@release
         with:
-          local: /home/runner/work/4-year-plan/4-year-plan/src/index.php
-          remote: /var/www/dev/html/index.php
+          local: src
+          remote: /var/www/dev/html
           host: ${{ secrets.HOST }}
           username: ${{ secrets.SSH_USER }}
           privateKey: ${{ secrets.PRIVATE_KEY}}
