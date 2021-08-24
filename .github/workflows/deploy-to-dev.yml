@@ -1,5 +1,16 @@
-name: Copy folder content recursively to remote
-on: [push]
+
+name: scp copy folder to remote via SSH
+
+on:
+  push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      CI: true
+      LOCAL: test
+    steps:      
+      - name: Copy folder content recursively to remote
         uses: garygrossgarten/github-action-scp@release
         with:
           local: src
