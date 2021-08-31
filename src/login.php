@@ -10,13 +10,11 @@ session_start();
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@100&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="header.js"></script>
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 </head>
 <body onload="header()">
 <div class="form">
-    <h1><a href="index.php" id="title">Bethel<br>4 Year Plan</a></h1>
-    <form class="input" name="login" action="login.php" method="post">
+    <h1><a href="index.php" id="title">Bethel University<br>4 Year Plan</a></h1>
+    <form class="input" name="login" action="auth.php" method="post">
         <label for="username">Username</label>
         <br>
         <?php
