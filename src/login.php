@@ -2,7 +2,7 @@
 session_start();
 // set the page title
 $title = "Login";
-
+include "./includes/header.php";
 include "./includes/main_nav_bar.php";
 ?>
 
