@@ -3,12 +3,12 @@ session_start();
 // set the page title
 $title = "Login";
 
-include "./includes/header.php";
+include "./includes/main_nav_bar.php";
 ?>
 
 <div class="form">
-    <h1><a href="index.php" id="title">Bethel University<br>4 Year Plan</a></h1>
-    <form class="input" name="login" action="auth.php" method="post">
+    <h1><a href="./index.php" id="title">Bethel University<br>4 Year Plan</a></h1>
+    <form class="input" name="login" action="./auth.php" method="post">
         <label for="username">Username</label>
         <br>
         <?php

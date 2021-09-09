@@ -20,7 +20,7 @@
                 <div class="d-flex">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Sign In</a>
+                            <a class="nav-link" href="./login.php">Sign In</a>
                         </li>
                     </ul>
                 </div>

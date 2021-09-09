@@ -7,7 +7,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col welcome_main_left">
-                <img class="welcome_main_img" alt="logo" src="./assets/svg/bg.svg" />
+                <img class="welcome_main_img" alt="logo" src="../assets/svg/bg.svg" />
 
             </div>
             <div class="col welcome_main_right_div">
@@ -29,7 +29,7 @@
                 <div class="col">
 
                     <div class="card welcome-card-image">
-                        <img src="./assets/svg/why.svg" class="card-img-top" alt="Why image">
+                        <img src="../assets/svg/why.svg" class="card-img-top" alt="Why image">
                         <div class="card-body">
                             <h5 class="card-title">Why Four year plan</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk
@@ -42,7 +42,7 @@
                 <!-- content 2 -->
                 <div class="col">
                     <div class="card welcome-card-image">
-                        <img src="./assets/svg/benefits.svg" class="card-img-top" alt="Benefits">
+                        <img src="../assets/svg/benefits.svg" class="card-img-top" alt="Benefits">
                         <div class="card-body">
                             <h5 class="card-title">Benefits</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk
@@ -54,7 +54,7 @@
                 <!-- content 3 -->
                 <div class="col">
                     <div class="card welcome-card-image">
-                        <img src="./assets/svg/team.svg" class="card-img-top" alt="Why image">
+                        <img src="../assets/svg/team.svg" class="card-img-top" alt="Why image">
                         <div class="card-body">
                             <h5 class="card-title">Development Team</h5>
                             <p class="card-text">names of developer, year </p>
