@@ -1,5 +1,6 @@
 <?php
 session_start();
+include "./includes/redirect.php";
 // set the page title
 $title = "Welcome";
 
