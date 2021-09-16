@@ -205,25 +205,25 @@ img {
   height: 100%;
 }
 
-.welcome_main_right_div h1 {
+.welcome_main_left_div h1 {
   font-size: 13rem;
   margin-top: 4rem;
   padding: 1rem;
   font-family: "Lato", sans-serif;
   text-align: center;
-  color: #090979;
+  color: #025ca6;
   font-weight: lighter;
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
     0 10px 10px rgba(0, 0, 0, 0.22);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
-.welcome_main_right_div h2 {
+.welcome_main_left_div h2 {
   font-size: 8rem;
   padding: 1rem;
   font-family: "Lato", sans-serif;
   text-align: center;
-  color: #090979;
+  color: #025ca6;
   font-weight: lighter;
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
     0 10px 10px rgba(0, 0, 0, 0.22);
@@ -235,16 +235,16 @@ img {
     width: 100%;
     padding: 1rem;
   }
-  .welcome_main_right_div h1 {
+  .welcome_main_left_div h1 {
     font-size: 5rem;
     margin-top: 4rem;
     padding: 1rem;
   }
-  .welcome_main_right_div h2 {
+  .welcome_main_left_div h2 {
     font-size: 2rem;
     padding: 1rem;
   }
-  .welcome_main_left {
+  .welcome_main_right_div {
     display: none;
   }
 }
@@ -254,16 +254,16 @@ img {
     width: 100%;
     padding: 1rem;
   }
-  .welcome_main_right_div h1 {
+  .welcome_main_left_div h1 {
     font-size: 10rem;
     margin-top: 4rem;
     padding: 1rem;
   }
-  .welcome_main_right_div h2 {
+  .welcome_main_left_div h2 {
     font-size: 8rem;
     padding: 1rem;
   }
-  .welcome_main_left {
+  .welcome_main_right_div {
     display: none;
   }
 }
@@ -273,12 +273,12 @@ img {
     width: 100%;
     padding: 1rem;
   }
-  .welcome_main_right_div h1 {
+  .welcome_main_left_div h1 {
     font-size: 6rem;
     margin-top: 4rem;
     padding: 1rem;
   }
-  .welcome_main_right_div h2 {
+  .welcome_main_left_div h2 {
     font-size: 3rem;
     padding: 1rem;
   }
@@ -289,25 +289,36 @@ img {
 
 /* welcome card design  */
 .welcome-card {
-  margin-top: 10rem;
-  margin-bottom: 10rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  padding: 1rem;
+  overflow: hidden;
+  height: auto;
 }
 
-.welcome-card-image {
-  width: 100%;
-  height: 100%;
+.welcome-card img {
+  width: 40rem;
+  height: 40rem;
+}
+.welcome-card a {
+  color: #025ca6;
+  font-size: 3rem;
+}
+
+.welcome-card a:hover {
+  color: #025ca6;
 }
 
 .card-title {
   font-size: 4rem;
-  color: #090979;
+  color: #025ca6;
   font-family: "Lato", sans-serif;
   padding: 2rem;
 }
 
 .card-text {
-  font-size: 2rem;
-  color: #090979;
+  font-size: 3rem;
+  color: #025ca6;
   font-family: "Lato", sans-serif;
   padding: 1.5rem;
 }

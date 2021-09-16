@@ -1,0 +1,24 @@
+// @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,900;1,900&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Limelight&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Sonsie+One&display=swap");
+// fonts
+
+// variables
+$font-size: 62.5%;
+
+$primary-font: "Lato", sans-serif;
+$Sacramento: "Sacramento", cursive;
+$Nothing: "Nothing You Could Do", cursive;
+$Gruppo: "Gruppo", cursive;
+$Limelight: "Limelight", cursive;
+$Sonsie: "Sonsie One", cursive;
+// color
+$primary-color: #025ca6;
+$bg-color: #ffffff;
+
+// Responsive mixing
+
+@import "./mixing";
+
+//
