@@ -1,6 +1,6 @@
 <?php
 //Get the page uri to see what page we're on.
-$page = $_SERVER['REQUEST_URI'];
+if(!isset($page)) $page = $_SERVER['REQUEST_URI'];
 if (isset($_SESSION["Status"])){//See if the status is logged in or not.
     if(str_contains( $page,'index.php')){//See if we're on the home page.
         if ($_SESSION["Status"] == "Logged in"){//If we are, and we're logged in

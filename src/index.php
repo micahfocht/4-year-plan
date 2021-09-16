@@ -1,9 +1,10 @@
 <?php
 session_start();
-include "./includes/redirect.php";
 // set the page title
 $title = "Welcome";
+$page = "index.php";
 
+include "./includes/redirect.php";
 include "./includes/header.php";
 
 // include main nav bar
