@@ -1,1 +1,12 @@
-/* No CSS */
+.footer-section {
+  width: 100%;
+  height: auto;
+  background-color: #025ca6;
+}
+
+.footer-section__main-div {
+  width: 80%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
