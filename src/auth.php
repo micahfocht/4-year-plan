@@ -6,6 +6,8 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     $password = $_POST["password"];
     session_start();
     $result = true;
+    //$conn =  oci_connect('micahfocht','password','csoracle.betheluniversity.edu:1521');
+    //echo $conn;
     /*$conn = new mysqli($servername, $dbuser, $dbpass, $dbname); //These credentials come from credentials.php
     // Check connection
     if ($conn->connect_error) {
@@ -27,7 +29,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
                         $_SESSION["UID"] = $user['User_ID'];
                         $newsql = "INSERT INTO Access (Access_Time, User_ID) VALUES (CURRENT_TIMESTAMP, '" . $_SESSION["UID"] . "');";
                         $conn->query($newsql);//Log the login in the database
-                        if(isset($_POST['remember'])) {//Check if the remember checkbox is checked and if it is save the username in a cookie
+                        if(isset($_POST['remember'])) {//Check if the "remember" checkbox is checked and if it is save the username in a cookie
                             setcookie("username", $username, time() + 60 * 60 * 24 * 30);
                         }else{
                             setcookie("username", "", time() - 1);
@@ -40,7 +42,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         $_SESSION["Name"] = $username;//Set the session variables
         $_SESSION["Status"] = "Logged in";
         $_SESSION["UID"] = 0;
-        if(isset($_POST['remember'])) {//Check if the remember checkbox is checked and if it is save the username in a cookie
+        if(isset($_POST['remember'])) {//Check if the "remember" checkbox is checked and if it is, save the username in a cookie
             setcookie("username", $username, time() + 60 * 60 * 24 * 30);
         }else{
             setcookie("username", "", time() - 1);
@@ -48,4 +50,4 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         header("Location: dashboard.php"); //redirect to the dashboard after login.
     }
 }
-if($_SESSION["Status"] != "Logged in") header("Location: login.php");
+include 'includes/redirect.php';
