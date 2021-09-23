@@ -54,7 +54,13 @@ h2 {
   font-family: "Roboto", sans-serif;
 }
 p {
-  color: white;
+  color: darkgray;
+  font-size: large;
+  font-family: "Open Sans", sans-serif;
+}
+select{
+  color: darkgray;
+  font-size: large;
   font-family: "Open Sans", sans-serif;
 }
 a {

@@ -21,7 +21,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     if ($result){
         /*if (mysqli_num_rows($result) >0){//If there are any entries in the database
             $_SESSION["Status"] = "Incorrect Username or Password."; //Default the status to incorrect
-            while($user = mysqli_fetch_array($result)){//While there are more rows
+            while($user = mysqli_fetch_array($result)){ //While there are more rows
                 if($user['username'] == $username){//If the username matches
                     if(password_verify($password, $user['password'])){//Check the password
                         $_SESSION["Name"] = $user['Name'];//Set the session variables
@@ -29,7 +29,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
                         $_SESSION["UID"] = $user['User_ID'];
                         $newsql = "INSERT INTO Access (Access_Time, User_ID) VALUES (CURRENT_TIMESTAMP, '" . $_SESSION["UID"] . "');";
                         $conn->query($newsql);//Log the login in the database
-                        if(isset($_POST['remember'])) {//Check if the "remember" checkbox is checked and if it is save the username in a cookie
+                        if(isset($_POST['remember'])) {//Check if the "remember" checkbox is checked and if it is, save the username in a cookie
                             setcookie("username", $username, time() + 60 * 60 * 24 * 30);
                         }else{
                             setcookie("username", "", time() - 1);
