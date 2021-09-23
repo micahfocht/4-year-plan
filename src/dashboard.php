@@ -158,4 +158,5 @@ include "./includes/main_nav_bar.php";
         </div>
     </div>
     <?php
+    include "./includes/footer_section.php";
     include "./includes/footer.php";
