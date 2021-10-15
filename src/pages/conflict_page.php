@@ -20,21 +20,27 @@
                     <thead>
                         <tr>
                             <th scope="col"></th>
-                            <th scope="col">ENGL 101</th>
-                            <th scope="col">PHIL 101</th>
-                            <th scope="col">US History</th>
+                            <th scope="col">CSC 101</th>
+                            <th scope="col">CSC 101</th>
+                            <th scope="col">CSC 200</th>
                         </tr>
                     </thead>
 
                     <tbody>
                         <tr>
-                            <th scope="row">CSC 110</th>
+                            <th scope="row">ENG 110</th>
                             <td>2</td>
                             <td class="table-danger">4</td>
                             <td>1</td>
                         </tr>
                         <tr>
-                            <th scope="row">CSC 330</th>
+                            <th scope="row">Math 330</th>
+                            <td class="table-danger">5</td>
+                            <td>1</td>
+                            <td>0.2</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">PHY 310</th>
                             <td class="table-danger">5</td>
                             <td>1</td>
                             <td>0.2</td>

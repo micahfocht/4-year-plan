@@ -66,3 +66,20 @@ $bg-color: #ffffff;
   margin-bottom: 1.5rem;
   font-size: 2rem;
 }
+
+// Dash board
+
+.dashboard_heading {
+  h3 {
+    font-size: 3rem;
+    color: rgb(108, 106, 106);
+  }
+  h2 {
+    font-size: 4rem;
+    color: rgb(108, 106, 106);
+    font-weight: 900;
+  }
+  p {
+    color: rgb(108, 106, 106);
+  }
+}
