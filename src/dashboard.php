@@ -53,9 +53,10 @@ $database = oci_connect($user,$pass,'//csoracle.betheluniversity.edu:1521/orclpd
                                                     order by e.e_seccode, e.e_secnum asc");
                                 oci_execute($query);
                                 echo "<table border='1'>\n";
+                                echo '<div class="row"';
                                 while($code = oci_fetch_array($query, OCI_ASSOC+OCI_RETURN_NULLS)){
-                                    echo('<div class="row">
-                                        <!-- section code -->
+                                    echo('
+                                        <!-- COL 2 ROW -->
                                         <div class="col-2">
                                         <p>' .
                                         $code["E_SECCODE"] .
@@ -85,9 +86,10 @@ $database = oci_connect($user,$pass,'//csoracle.betheluniversity.edu:1521/orclpd
                                                 <button type="button" class="btn btn-danger">X</button>
                                             </p>
                                         </div>
-                                        </div>'
+                                        '
                                     );
                                 }
+                                echo '</div>';
                                 ?>
                                 <!-- space before card -->
                                 <br>
