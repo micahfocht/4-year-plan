@@ -12,7 +12,7 @@ $database = oci_connect($user,$pass,'//csoracle.betheluniversity.edu:1521/orclpd
 ?>
 <div class="general-container">
     <div class="container-fluid dashboard">
-        <div class="row">
+        < class="row">
             <div class="col-12 dashboard_heading">
                 <div class='row'>
                     <div class="col">
@@ -128,14 +128,21 @@ $database = oci_connect($user,$pass,'//csoracle.betheluniversity.edu:1521/orclpd
                             </div>
                         </div>
                     </div>
-                    <!-- end of first col -->
-                    <div class="row">
-                        <!-- content 1 -->
-                        <div class="col-6">
-                            <div class="card welcome-card">
-                                <div class="card-body">
-                                    <h5 class="card-title" align="center">Spring 2020</h5>
-                                    <?php
+                </div>
+            </div>
+
+
+
+
+
+            <!-- end of first col -->
+            <div class="row">
+                <!-- content 1 -->
+                <div class="col-6">
+                    <div class="card welcome-card">
+                        <div class="card-body">
+                            <h5 class="card-title" align="center">Spring 2020</h5>
+                            <?php
                                     $query = oci_parse($database, "select unique e.e_seccode,e.e_secnum, c.c_title, c.c_max from ENROLL e, STUDENT s, COURSE c 
                                                     where e.e_stid = s.s_id and s.s_email = 'micah.focht@betheluniversity.edu' and e.e_semester = '2020SP'
                                                     and e.e_seccode = c.c_code and e.e_secnum = c.c_num
@@ -178,48 +185,48 @@ $database = oci_connect($user,$pass,'//csoracle.betheluniversity.edu:1521/orclpd
                                         );
                                     }
                                     ?>
-                                    <!-- space before card -->
-                                    <br>
-                                    <hr>
+                            <!-- space before card -->
+                            <br>
+                            <hr>
 
-                                    <!-- adding button -->
-                                    <div class="row">
-                                        <!-- dropdown one -->
-                                        <div class="col-3">
+                            <!-- adding button -->
+                            <div class="row">
+                                <!-- dropdown one -->
+                                <div class="col-3">
 
 
-                                            <select name="course" id="course">
-                                                <option value="0">Select Course</option>
-                                                <option value="CSC">CSC</option>
-                                                <option value="MATH">MATH</option>
-                                                <option value="CTT">CTT</option>
-                                                <option value="PHY">PHY</option>
-                                            </select>
-                                        </div>
-                                        <!-- dropdown two -->
-                                        <div class="col-3">
-                                            <select name="course" id="course">
-                                                <option value="0">Course Number</option>
-                                                <option value="100">100</option>
-                                                <option value="111">111</option>
-                                                <option value="222">222</option>
-                                                <option value="343">343</option>
-                                            </select>
-                                        </div>
+                                    <select name="course" id="course">
+                                        <option value="0">Select Course</option>
+                                        <option value="CSC">CSC</option>
+                                        <option value="MATH">MATH</option>
+                                        <option value="CTT">CTT</option>
+                                        <option value="PHY">PHY</option>
+                                    </select>
+                                </div>
+                                <!-- dropdown two -->
+                                <div class="col-3">
+                                    <select name="course" id="course">
+                                        <option value="0">Course Number</option>
+                                        <option value="100">100</option>
+                                        <option value="111">111</option>
+                                        <option value="222">222</option>
+                                        <option value="343">343</option>
+                                    </select>
+                                </div>
 
-                                        <!-- blank space -->
-                                        <div class="col-6">
-                                            <button type="button" class="btn btn-outline-primary btn-lg">Add</button>
-                                        </div>
-                                    </div>
+                                <!-- blank space -->
+                                <div class="col-6">
+                                    <button type="button" class="btn btn-outline-primary btn-lg">Add</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
     </div>
+</div>
+</div>
+</div>
 </div>
 
 <?php
