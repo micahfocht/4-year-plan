@@ -15,7 +15,7 @@ include "./includes/redirect.php";
         <?php
         if (isset($_COOKIE['email'])) {
             echo '<input type="email" name="email" id="email" value="' . $_COOKIE['email'] . '">';
-        } else echo '<input type="email" name="email" id="email">';
+        } else echo '<input type="email" name="email" id="email" size="40">';
         ?>
         <br>
         <label for="password">Password</label>
@@ -23,12 +23,12 @@ include "./includes/redirect.php";
         <?php
         if (isset($_SESSION['Status'])) {
             if ($_SESSION['Status'] == 'Incorrect Username or Password.') {
-                echo '<input type="password" name="password" id="password" class="error">';
+                echo '<input type="password" name="password" id="password" class="error" size="40">';
             } else {
                 header("Location: dashboard.php");
             }
         } else {
-            echo '<input type="password" name="password" id="password">';
+            echo '<input type="password" name="password" id="password" size="40">';
         } ?>
 
         <br>
