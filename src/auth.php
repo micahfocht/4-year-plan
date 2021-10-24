@@ -1,8 +1,8 @@
 <?php
 //require 'credentials.php';
-if (isset($_POST['username']) && isset($_POST['password'])) {
+if (isset($_POST['email']) && isset($_POST['password'])) {
     // Create connection
-    $username = $_POST["username"];
+    $email = $_POST["email"];
     $password = $_POST["password"];
     session_start();
     $result = true;
@@ -39,13 +39,13 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
                 }
             }
         }*/
-        $_SESSION["Name"] = $username;//Set the session variables
+        $_SESSION["email"] = $email;//Set the session variables
         $_SESSION["Status"] = "Logged in";
         $_SESSION["UID"] = 0;
         if(isset($_POST['remember'])) {//Check if the "remember" checkbox is checked and if it is, save the username in a cookie
-            setcookie("username", $username, time() + 60 * 60 * 24 * 30);
+            setcookie("email", $email, time() + 60 * 60 * 24 * 30);
         }else{
-            setcookie("username", "", time() - 1);
+            setcookie("email", "", time() - 1);
         }
         header("Location: dashboard.php"); //redirect to the dashboard after login.
     }

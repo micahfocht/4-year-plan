@@ -10,12 +10,12 @@ include "./includes/redirect.php";
 <div class="form">
     <h1><a href="./index.php" id="title">Bethel University<br>4 Year Plan</a></h1>
     <form class="input" name="login" action="./auth.php" method="post" >
-        <label for="username">Username</label>
+        <label for="email">Email</label>
         <br>
         <?php
-        if (isset($_COOKIE['username'])) {
-            echo '<input type="text" name="username" id="username" value="' . $_COOKIE['username'] . '">';
-        } else echo '<input type="text" name="username" id="username">';
+        if (isset($_COOKIE['email'])) {
+            echo '<input type="email" name="email" id="email" value="' . $_COOKIE['email'] . '">';
+        } else echo '<input type="email" name="email" id="email">';
         ?>
         <br>
         <label for="password">Password</label>
@@ -33,7 +33,7 @@ include "./includes/redirect.php";
 
         <br>
         <?php
-        if (isset($_COOKIE['username'])) {
+        if (isset($_COOKIE['email'])) {
             echo '<input type="checkbox" name="remember" id="remember" checked>';
         } else echo '<input type="checkbox" name="remember" id="remember">';
         ?>

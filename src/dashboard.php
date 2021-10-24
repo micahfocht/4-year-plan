@@ -7,7 +7,7 @@ include "./includes/redirect.php";
 include "./includes/header.php";
 include "./includes/main_nav_bar.php";
 include "./includes/creds.php";
-$email = "micah.focht@betheluniversity.edu";
+$email = $_SESSION["email"];
 $database = oci_connect($user,$pass,'//csoracle.betheluniversity.edu:1521/orclpdb');
 ?>
 
@@ -22,7 +22,8 @@ $database = oci_connect($user,$pass,'//csoracle.betheluniversity.edu:1521/orclpd
                         <div class="col">
                             <?php
                             echo'<h2 class="">';
-                            $query = oci_parse($database, "select unique s.s_name from STUDENT s where s.s_email = 'micah.focht@betheluniversity.edu'");
+                            $query = oci_parse($database, "select unique s.s_name from STUDENT s where s.s_email = :email");
+                            oci_bind_by_name($query,":email", $email);
                             oci_execute($query);
                             while ($row = oci_fetch_array($query, OCI_ASSOC+OCI_RETURN_NULLS)) {
                                 foreach ($row as $item){
@@ -34,7 +35,18 @@ $database = oci_connect($user,$pass,'//csoracle.betheluniversity.edu:1521/orclpd
                         </div>
                         <div class="col">
                             <h3>Major:</h3>
-                            <p>Computer Science</p>
+                            <p>
+                            <?php
+                            $query = oci_parse($database, "select unique m.sm_major from STUDENT s, STU_MAJ m where s.s_email = :email and s.s_id = m.sm_stid");
+                            oci_bind_by_name($query,":email", $email);
+                            oci_execute($query);
+                            while ($row = oci_fetch_array($query, OCI_ASSOC+OCI_RETURN_NULLS)) {
+                                foreach ($row as $item){
+                                    echo($item);
+                                }
+                            }
+                            echo'</p>';
+                            ?>
                         </div>
                         <div class="col">
                             <h3>Expected Graduation Date:</h3>
@@ -60,8 +72,7 @@ $database = oci_connect($user,$pass,'//csoracle.betheluniversity.edu:1521/orclpd
                             <div class="row">
                                 <?php
                                     $semester = '2019FA';
-                                    include "./includes/courses.php";
-                                    include "./includes/courseselect.php";
+                                    include "./includes/coursespast.php";
                                 ?>
                         </div>
                         </div>
@@ -76,8 +87,7 @@ $database = oci_connect($user,$pass,'//csoracle.betheluniversity.edu:1521/orclpd
                 <div class="row">
                     <?php
                     $semester = '2020SP';
-                    include "./includes/courses.php";
-                    include "./includes/courseselect.php";
+                    include "./includes/coursespast.php";
                     ?>
                 </div>
             </div>
@@ -96,8 +106,7 @@ $database = oci_connect($user,$pass,'//csoracle.betheluniversity.edu:1521/orclpd
                             <div class="row">
                                 <?php
                                 $semester = '2020FA';
-                                include "./includes/courses.php";
-                                include "./includes/courseselect.php";
+                                include "./includes/coursespast.php";
                                 ?>
                             </div>
                         </div>
@@ -112,7 +121,41 @@ $database = oci_connect($user,$pass,'//csoracle.betheluniversity.edu:1521/orclpd
                             <div class="row">
                                 <?php
                                 $semester = '2021SP';
-                                include "./includes/courses.php";
+                                include "./includes/coursespast.php";
+                                ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="row">
+
+                <!-- content 1 -->
+                <div class="col-6">
+                    <div class="card welcome-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Fall 2021</h5>
+                            <div class="row">
+                                <?php
+                                $semester = '2021FA';
+                                include "./includes/coursespast.php";
+                                ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-6">
+                    <div class="card welcome-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Spring 2022</h5>
+                            <div class="row">
+                                <?php
+                                $semester = '2022SP';
+                                include "./includes/coursespast.php";
                                 include "./includes/courseselect.php";
                                 ?>
                             </div>
