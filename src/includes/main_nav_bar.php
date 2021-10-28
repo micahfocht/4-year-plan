@@ -20,12 +20,13 @@
                 <div class="d-flex">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href=
                             <?php
                                 if (!isset($_SESSION['Status'])){
-                                    echo '"./login.php">Sign In';
+                                    echo '<a class="nav-link" href="./login.php">Sign In';
                                 }elseif($_SESSION['Status'] == 'Logged in'){
-                                    echo '"./logout.php">Sign Out';
+                                    echo '<a class="nav-link" href="./preferences.php">Preferences</a>';
+                                    echo '</li><li class="nav-item">';
+                                    echo '<a class="nav-link" href="./logout.php">Sign Out';
                                 }
                             ?>
                             </a>

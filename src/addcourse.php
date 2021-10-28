@@ -1,4 +1,6 @@
 <?php
+$user=null;
+$pass=null;
 include './includes/redirect.php';
 include './includes/creds.php';
 $database = oci_connect($user,$pass,'//csoracle.betheluniversity.edu:1521/orclpdb');

@@ -16,46 +16,9 @@ $database = oci_connect($user,$pass,'//csoracle.betheluniversity.edu:1521/orclpd
         <div class="container-fluid dashboard">
 
 
-            <div class="row">
-                <div class="col-12 dashboard_heading">
-                    <div class='row'>
-                        <div class="col">
-                            <?php
-                            echo'<h2 class="">';
-                            $query = oci_parse($database, "select unique s.s_name from STUDENT s where s.s_email = :email");
-                            oci_bind_by_name($query,":email", $email);
-                            oci_execute($query);
-                            while ($row = oci_fetch_array($query, OCI_ASSOC+OCI_RETURN_NULLS)) {
-                                foreach ($row as $item){
-                                    echo($item);
-                                }
-                            }
-                            echo'</h2>';
-                            ?>
-                        </div>
-                        <div class="col">
-                            <h3>Major:</h3>
-                            <p>
-                            <?php
-                            $query = oci_parse($database, "select unique m.sm_major from STUDENT s, STU_MAJ m where s.s_email = :email and s.s_id = m.sm_stid");
-                            oci_bind_by_name($query,":email", $email);
-                            oci_execute($query);
-                            while ($row = oci_fetch_array($query, OCI_ASSOC+OCI_RETURN_NULLS)) {
-                                foreach ($row as $item){
-                                    echo($item);
-                                }
-                            }
-                            echo'</p>';
-                            ?>
-                        </div>
-                        <div class="col">
-                            <h3>Expected Graduation Date:</h3>
-                            <p>1/4/20</p>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
+            <?php
+            include "./includes/stuinfo.php";
+            ?>
 
 
 <!--            end of heading row-->

@@ -1,4 +1,6 @@
 <?php
+$user=null;
+$pass=null;
 require './includes/creds.php';
 if (isset($_POST['email']) && isset($_POST['password'])) {
     // Create connection
