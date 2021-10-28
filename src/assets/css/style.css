@@ -329,3 +329,7 @@ img {
   font-family: "Lato", sans-serif;
   padding: 1.5rem;
 }
+.formgray {
+  font-family: "Lato", sans-serif;
+  color: gray;
+}
