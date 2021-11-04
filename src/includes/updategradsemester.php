@@ -1,6 +1,6 @@
 <?php
 session_start();
-include './includes/redirect.php';
+include './redirect.php';
 $user = null;
 $pass = null;
 include "./creds.php";
