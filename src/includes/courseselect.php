@@ -3,12 +3,11 @@
 <hr>
 
 <!-- adding button -->
+<form action="./includes/addcourse.php" method="post" id="addcourse">
 <div class="row">
     <!-- dropdown one -->
     <div class="col-3">
-
-
-        <select name="course" id="course">
+        <select name="seccode" id="seccode">
             <option value="0">Select Course</option>
             <option value="CSC">CSC</option>
             <option value="MATH">MATH</option>
@@ -18,7 +17,7 @@
     </div>
     <!-- dropdown two -->
     <div class="col-3">
-        <select name="course" id="course">
+        <select name="secnum" id="secnum">
             <option value="0">Course Number</option>
             <option value="100">100</option>
             <option value="111">111</option>
@@ -27,10 +26,15 @@
         </select>
     </div>
     <div class="col-1">
-        &nbsp;
+        <input type="hidden" id="semester" name="semester" value=
+<?php
+        echo ('"' . $semester . '"');
+?>>
+
     </div>
     <!-- blank space -->
     <div class="col-5">
-        <button type="button" class="btn btn-outline-primary btn-lg">Add</button>
+        <button type="submit" class="btn btn-outline-primary btn-lg">Add</button>
     </div>
 </div>
+</form>
