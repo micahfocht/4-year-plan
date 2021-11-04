@@ -1,6 +1,6 @@
 <!-- Bootstrap’s powerful, responsive navigation header, the navbar. -->
 <div class="main_nav_bar">
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #ffffff; font-size:20px;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" style="font-size:20px;">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
                 aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">

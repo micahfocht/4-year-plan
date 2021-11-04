@@ -165,10 +165,8 @@ img {
 
 /* main nav bar design */
 .main_nav_bar {
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 4rem;
+  width: auto;
+  padding: 6rem;
 }
 
 .navbar a {
