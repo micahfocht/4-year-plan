@@ -21,7 +21,7 @@ $database = oci_connect($user,$pass,'//csoracle.betheluniversity.edu:1521/orclpd
 
             <!-- content 1 -->
             <div class="col-12">
-                <div class="card welcome-card">
+                <div class="card reusable-card">
                     <div class="card-body">
                         <h5 class="card-title">Expected Graduation Semester</h5>
                         <div class="row">
@@ -56,7 +56,7 @@ $database = oci_connect($user,$pass,'//csoracle.betheluniversity.edu:1521/orclpd
 
             <!-- content 2 -->
             <div class="col-12">
-                <div class="card welcome-card">
+                <div class="card reusable-card">
                     <div class="card-body">
                         <h5 class="card-title">Manually Enter Courses</h5>
                         <div class="row">

@@ -21,12 +21,12 @@
         <hr>
 
         <!-- new rows  -->
-        <div class="welcome-card">
+        <div class="reusable-card">
             <div class="row">
                 <!-- content 1 -->
                 <div class="col">
 
-                    <div class="card welcome-card">
+                    <div class="card reusable-card">
                         <img src="./assets/svg/why.svg" class="card-img-top" alt="Why four year plan">
                         <div class="card-body">
                             <h5 class="card-title">Why Four year plan</h5>
@@ -41,7 +41,7 @@
                 </div>
                 <!-- content 2 -->
                 <div class="col">
-                    <div class="card welcome-card">
+                    <div class="card reusable-card">
                         <img src="./assets/svg/benefits.svg" class="card-img-top " alt="Benefits of this plan">
                         <div class="card-body">
                             <h5 class="card-title">Benefits of this plan</h5>
@@ -54,7 +54,7 @@
                 </div>
                 <!-- content 3 -->
                 <div class="col ">
-                    <div class="card welcome-card">
+                    <div class="card reusable-card">
                         <img src="./assets/svg/team.svg" class="card-img-top" alt="Our Development Team">
                         <div class="card-body">
                             <h5 class="card-title">Development Team</h5>

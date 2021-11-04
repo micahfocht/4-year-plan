@@ -294,7 +294,7 @@ img {
 }
 
 /* welcome card design  */
-.welcome-card {
+.reusable-card {
   margin-top: 5rem;
   margin-bottom: 5rem;
   padding: 1rem;
@@ -302,16 +302,16 @@ img {
   height: auto;
 }
 
-.welcome-card img {
+.reusable-card img {
   width: 40rem;
   height: 40rem;
 }
-.welcome-card a {
+.reusable-card a {
   color: #025ca6;
   font-size: 3rem;
 }
 
-.welcome-card a:hover {
+.reusable-card a:hover {
   color: #025ca6;
 }
 
