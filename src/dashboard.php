@@ -124,20 +124,9 @@ $database = oci_connect($user,$pass,'//csoracle.betheluniversity.edu:1521/orclpd
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="card welcome-card">
-                            <div class="card-body">
-                                <h5 class="card-title">Other Courses</h5>
-                                <div class="row">
-                                    <?php
-                                    include "./includes/othercourses.php";
-                                    ?>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php
+                include "./includes/othercourses.php";
+                ?>
 
               <!--  <div class="col-2">
                     <div class="card welcome-card">
@@ -152,7 +141,7 @@ $database = oci_connect($user,$pass,'//csoracle.betheluniversity.edu:1521/orclpd
 
         </div>
         </div>
-
+    </div>
 
 <?php
 include "./includes/footer_section.php";
