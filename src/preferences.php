@@ -61,9 +61,31 @@ $database = oci_connect($user,$pass,'//csoracle.betheluniversity.edu:1521/orclpd
                         <h5 class="card-title">Manually Enter Courses</h5>
                         <div class="row">
                             <h3>Manually add courses that have been taken in the past if they are not available.</h3>
-                            <form>
-
-                            </form>
+                                <form action="./includes/addcourse.php" method="post" id="addcourse">
+                                    <div class="col-2">
+                                        <label for="seccode" class="formgray">Section Code</label>
+                                        <input type="text" name="seccode" id="seccode">
+                                    </div>
+                                    <div class="col-1">
+                                        <label for="secnum" class="formgray">Section Number</label>
+                                        <input type="text" name="secnum" id="secnum">
+                                    </div>
+                                    <div class="col-3">
+                                        <label for="semester" class="formgray">Semester</label>
+                                        <input type="text" name="semester" id="semester">
+                                    </div>
+                                    <div class="col-3">
+                                        <label for="coursetitle" class="formgray">Title</label>
+                                        <input type="text" name="coursetitle" id="coursetitle">
+                                    </div>
+                                    <div class="col-1">
+                                        <label for="credit" class="formgray">Credit</label>
+                                        <input type="text" name="credit" id="credit">
+                                    </div>
+                                    <div class="col-2">
+                                        <input type="submit" value="Submit">
+                                    </div>
+                                </form>
                         </div>
                     </div>
                 </div>

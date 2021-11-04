@@ -53,11 +53,30 @@ while($semesters = oci_fetch_array($querysem, OCI_ASSOC+OCI_RETURN_NULLS)) {
                                         '
             );
         }
-        $query = oci_parse($database, "select unique e.e_seccode,e.e_secnum, e.e_title, e.e_credit from ENROLL_MANUAL e, STUDENT s, COURSE c 
+    }
+}
+$querysem = oci_parse($database, "select unique e.e_semester from ENROLL_MANUAL e, STUDENT s where e.e_stid = s.s_id and s.s_email = :email");
+oci_bind_by_name($querysem,":email",$email);
+oci_execute($querysem);
+while($semesters = oci_fetch_array($querysem, OCI_ASSOC+OCI_RETURN_NULLS)) {
+    $season = substr($semesters["E_SEMESTER"], -2);
+    if ($season != "SP" && $season != "FA") {
+        if (!isset($draw)) {
+            $draw = true;
+            if ($draw = true) {
+                echo('                <div class="row">
+                    <div class="col-12">
+                        <div class="card welcome-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Other Courses</h5>
+                                <div class="row">');
+            }
+        }
+         $query = oci_parse($database, "select unique e.e_seccode,e.e_secnum, e.e_title, e.e_credit from ENROLL_MANUAL e, STUDENT s, COURSE c 
                                                         where e.e_stid = s.s_id and s.s_email = :email and e.e_semester = :semester
                                                         order by e.e_seccode, e.e_secnum");
         oci_bind_by_name($query, ":email", $email);
-        oci_bind_by_name($query, ":semester", $semester);
+        oci_bind_by_name($query, ":semester", $semesters['E_SEMESTER']);
         oci_execute($query);
         while ($codemanual = oci_fetch_array($query, OCI_ASSOC + OCI_RETURN_NULLS)) {
             echo('
