@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="MajorRquirement" directorySegmentName="seg_0" id="FFDD564D-47AF-BDCF-1ED6-A518A97FDC68">
+<createdBy>Zach</createdBy>
+<createdTime>2021-10-28 16:50:02 UTC</createdTime>
+<ownerDesignName>FourYearPlan</ownerDesignName>
+<engineerTo>
+<item key="EAF6748F-4F82-593E-2DFD-F4E6D0486E39" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<nameOnSource>requires</nameOnSource>
+<nameOnTarget>is required by</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>26104C40-D72F-0501-3370-BF52165A070F</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>BF443525-7E2B-53E0-FB27-8B3A30CEBB6E</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

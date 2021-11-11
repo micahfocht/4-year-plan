@@ -1,0 +1,104 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="F5E6E171-75EA-1858-DE45-48CD39EFC730" name="Enrollment">
+<createdBy>Zach</createdBy>
+<createdTime>2021-09-22 23:21:07 UTC</createdTime>
+<ownerDesignName>FourYearPlan3</ownerDesignName>
+<engineerTo>
+<item key="EAF6748F-4F82-593E-2DFD-F4E6D0486E39" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="semester" id="A8267B19-C6DA-2C5F-6EFB-ECB8AF7A2EA5">
+<createdBy>zachary.hess</createdBy>
+<createdTime>2021-10-28 18:52:35 UTC</createdTime>
+<ownerDesignName>FourYearPlan3</ownerDesignName>
+<engineerTo>
+<item key="EAF6748F-4F82-593E-2DFD-F4E6D0486E39" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>6</dataTypeSize>
+<ownDataTypeParameters>6,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="section_num" id="B9C58E39-25C8-E130-C54C-4F7548223889">
+<createdBy>Zach</createdBy>
+<createdTime>2021-11-11 05:14:28 UTC</createdTime>
+<ownerDesignName>FourYearPlan3</ownerDesignName>
+<engineerTo>
+<item key="EAF6748F-4F82-593E-2DFD-F4E6D0486E39" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="course_code" id="85C22B0F-F772-9A0C-4D36-09A9D2864CF3">
+<createdBy>Zach</createdBy>
+<createdTime>2021-11-11 05:14:56 UTC</createdTime>
+<generatorID>166D00B8-5901-3F72-DF6D-2FEAA5E99099</generatorID>
+<ownerDesignName>FourYearPlan3</ownerDesignName>
+<engineerTo>
+<item key="EAF6748F-4F82-593E-2DFD-F4E6D0486E39" value="true"/>
+</engineerTo>
+<referedAttribute>51B2299F-2B49-E9A1-2C2C-F3FEA36DB62E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>3</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="course_name" id="B7FAF537-DBD6-028D-611A-C4ED359CE764">
+<createdBy>Zach</createdBy>
+<createdTime>2021-11-11 05:14:56 UTC</createdTime>
+<generatorID>166D00B8-5901-3F72-DF6D-2FEAA5E99099</generatorID>
+<ownerDesignName>FourYearPlan3</ownerDesignName>
+<engineerTo>
+<item key="EAF6748F-4F82-593E-2DFD-F4E6D0486E39" value="true"/>
+</engineerTo>
+<referedAttribute>3F891CB9-0CD4-E366-6AD4-8FE68ACF9D45</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="student_id" id="A692B5FD-245D-3A2C-10EB-7F8DA2B66759">
+<createdBy>Zach</createdBy>
+<createdTime>2021-11-11 05:17:17 UTC</createdTime>
+<generatorID>2B4166F0-9486-31C1-32F3-56A96892C8BF</generatorID>
+<ownerDesignName>FourYearPlan3</ownerDesignName>
+<engineerTo>
+<item key="EAF6748F-4F82-593E-2DFD-F4E6D0486E39" value="true"/>
+</engineerTo>
+<referedAttribute>C46F71B8-4E56-DFEF-41A0-1F35130CD36E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="BB243A99-82F0-B51A-2E06-0264C4C2E579" name="Enrollment PK">
+<createdBy>zachary.hess</createdBy>
+<createdTime>2021-10-28 18:34:49 UTC</createdTime>
+<ownerDesignName>FourYearPlan3</ownerDesignName>
+<engineerTo>
+<item key="EAF6748F-4F82-593E-2DFD-F4E6D0486E39" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>85C22B0F-F772-9A0C-4D36-09A9D2864CF3</attributeRef>
+<attributeRef>B7FAF537-DBD6-028D-611A-C4ED359CE764</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

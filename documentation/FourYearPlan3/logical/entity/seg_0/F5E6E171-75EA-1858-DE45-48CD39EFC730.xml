@@ -1,0 +1,71 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="F5E6E171-75EA-1858-DE45-48CD39EFC730" name="Enrollment">
+<createdBy>Zach</createdBy>
+<createdTime>2021-09-22 23:21:07 UTC</createdTime>
+<ownerDesignName>FourYearPlan</ownerDesignName>
+<engineerTo>
+<item key="EAF6748F-4F82-593E-2DFD-F4E6D0486E39" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="e_stid" id="52D7369A-A71A-EB53-AC93-80DE4D9596BD">
+<createdBy>zachary.hess</createdBy>
+<createdTime>2021-10-28 18:49:29 UTC</createdTime>
+<ownerDesignName>FourYearPlan</ownerDesignName>
+<engineerTo>
+<item key="EAF6748F-4F82-593E-2DFD-F4E6D0486E39" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="semester" id="A8267B19-C6DA-2C5F-6EFB-ECB8AF7A2EA5">
+<createdBy>zachary.hess</createdBy>
+<createdTime>2021-10-28 18:52:35 UTC</createdTime>
+<ownerDesignName>FourYearPlan</ownerDesignName>
+<engineerTo>
+<item key="EAF6748F-4F82-593E-2DFD-F4E6D0486E39" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>6</dataTypeSize>
+<ownDataTypeParameters>6,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="e_id" id="7DB8BB39-DD5D-01F6-D503-2D97CCF9E8FE">
+<createdBy>zachary.hess</createdBy>
+<createdTime>2021-10-28 18:54:20 UTC</createdTime>
+<ownerDesignName>FourYearPlan</ownerDesignName>
+<engineerTo>
+<item key="EAF6748F-4F82-593E-2DFD-F4E6D0486E39" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="BB243A99-82F0-B51A-2E06-0264C4C2E579" name="Enrollment PK">
+<createdBy>zachary.hess</createdBy>
+<createdTime>2021-10-28 18:34:49 UTC</createdTime>
+<ownerDesignName>FourYearPlan</ownerDesignName>
+<engineerTo>
+<item key="EAF6748F-4F82-593E-2DFD-F4E6D0486E39" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>7DB8BB39-DD5D-01F6-D503-2D97CCF9E8FE</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
