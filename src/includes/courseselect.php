@@ -1,3 +1,6 @@
+<?php
+include codeloookup.php;
+?>
 <!-- space before card -->
 <br>
 <hr>
