@@ -18,12 +18,14 @@ $database = oci_connect($user,$pass,'//csoracle.betheluniversity.edu:1521/orclpd
 
             <?php
             include "./includes/stuinfo.php";
+            $semester = "OTHER"
             ?>
 
 
 <!--            end of heading row-->
 
 <!--            #####################################################-->
+
 <div class="row">
 
             <!-- content 1 -->
