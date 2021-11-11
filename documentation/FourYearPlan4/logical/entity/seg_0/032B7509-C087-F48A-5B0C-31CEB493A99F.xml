@@ -1,0 +1,72 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="032B7509-C087-F48A-5B0C-31CEB493A99F" name="Semester">
+<createdBy>Zach</createdBy>
+<createdTime>2021-11-11 05:18:39 UTC</createdTime>
+<ownerDesignName>FourYearPlan3</ownerDesignName>
+<engineerTo>
+<item key="EAF6748F-4F82-593E-2DFD-F4E6D0486E39" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="semster_name" id="54845EAF-DC19-C151-71F7-A6A9F7E4AD23">
+<createdBy>Zach</createdBy>
+<createdTime>2021-11-11 05:18:55 UTC</createdTime>
+<ownerDesignName>FourYearPlan3</ownerDesignName>
+<engineerTo>
+<item key="EAF6748F-4F82-593E-2DFD-F4E6D0486E39" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>6</dataTypeSize>
+<ownDataTypeParameters>6,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="start_date" id="D1851513-B104-AE01-F0DF-BCA37B714D94">
+<createdBy>Zach</createdBy>
+<createdTime>2021-11-11 05:19:21 UTC</createdTime>
+<ownerDesignName>FourYearPlan3</ownerDesignName>
+<engineerTo>
+<item key="EAF6748F-4F82-593E-2DFD-F4E6D0486E39" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="end_date" id="FA4507C5-621C-0DFA-369D-8A2A21AC7863">
+<createdBy>Zach</createdBy>
+<createdTime>2021-11-11 05:19:39 UTC</createdTime>
+<ownerDesignName>FourYearPlan3</ownerDesignName>
+<engineerTo>
+<item key="EAF6748F-4F82-593E-2DFD-F4E6D0486E39" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="D0676615-E924-111E-61B2-4623C47FE1E9" name="Semester PK">
+<createdBy>Zach</createdBy>
+<createdTime>2021-11-11 05:19:24 UTC</createdTime>
+<ownerDesignName>FourYearPlan3</ownerDesignName>
+<engineerTo>
+<item key="EAF6748F-4F82-593E-2DFD-F4E6D0486E39" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>54845EAF-DC19-C151-71F7-A6A9F7E4AD23</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
