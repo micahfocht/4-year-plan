@@ -20,6 +20,7 @@
     <!-- this link should always be commented out.
         it is only use for development -->
     <link rel="stylesheet" href="./assets/scss_dev/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 </head>
 
 <body>
