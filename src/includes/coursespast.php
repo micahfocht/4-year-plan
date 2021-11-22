@@ -42,32 +42,99 @@ oci_bind_by_name($query,":email",$email);
 oci_bind_by_name($query, ":semester", $semester);
 oci_execute($query);
 while($code = oci_fetch_array($query, OCI_ASSOC+OCI_RETURN_NULLS)){
-    echo('
+    if ($code["E_TITLE"] != "" && $code["E_CREDIT"] != "") {
+        echo('
                                         <!-- COL 2 ROW -->
                                         <div class="col-2">
                                         <p>' .
-        $code["E_SECCODE"] .
-        '</p>
+            $code["E_SECCODE"] .
+            '</p>
                                         </div>
                                         <!-- Course Code -->
                                         <div class="col-2">
                                         <p>' .
-        $code["E_SECNUM"].
-        '</p>
+            $code["E_SECNUM"] .
+            '</p>
                                         </div>
                                         <!-- Course Name -->
                                         <div class="col-7">
                                         <p>' .
-        $code["E_TITLE"] .
-        '</p>
+            $code["E_TITLE"] .
+            '</p>
                                         </div>
                                         <!-- hours -->
                                         <div class="col-1">
                                         <p>' .
-        $code["E_CREDIT"] .
-        '</p>
+            $code["E_CREDIT"] .
+            '</p>
                                         </div>
                                         '
-    );
+        );
+    }else{
+        $name = oci_parse($database, "select unique c_title, c_max, c_catalog from COURSE where c_code like UPPER(:code) and c_num like :num order by  c_catalog desc");
+        oci_bind_by_name($name,":code",$code['E_SECCODE']);
+        oci_bind_by_name($name, ":num", $code['E_SECNUM']);
+        oci_execute($name);
+        $done = False;
+        while($extra = oci_fetch_array($name, OCI_ASSOC+OCI_RETURN_NULLS)) {
+            if (!$done) {
+                echo('
+                                        <!-- COL 2 ROW -->
+                                        <div class="col-2">
+                                        <p>' .
+                    $code["E_SECCODE"] .
+                    '</p>
+                                        </div>
+                                        <!-- Course Code -->
+                                        <div class="col-2">
+                                        <p>' .
+                    $code["E_SECNUM"] .
+                    '</p>
+                                        </div>
+                                        <!-- Course Name -->
+                                        <div class="col-7">
+                                        <p>' .
+                    $extra["C_TITLE"] .
+                    '</p>
+                                        </div>
+                                        <!-- hours -->
+                                        <div class="col-1">
+                                        <p>' .
+                    $extra["C_MAX"] .
+                    '</p>
+                                        </div>
+                                        '
+                );
+                $done = true;
+            }
+        }
+        if(!$done){
+            echo('
+                                        <!-- COL 2 ROW -->
+                                        <div class="col-2">
+                                        <p>' .
+                $code["E_SECCODE"] .
+                '</p>
+                                        </div>
+                                        <!-- Course Code -->
+                                        <div class="col-2">
+                                        <p>' .
+                $code["E_SECNUM"] .
+                '</p>
+                                        </div>
+                                        <!-- Course Name -->
+                                        <div class="col-7">
+                                        <p>' .
+                $code["E_TITLE"] .
+                '</p>
+                                        </div>
+                                        <!-- hours -->
+                                        <div class="col-1">
+                                        <p>' .
+                $code["E_CREDIT"] .
+                '</p>
+                                        </div>
+                                        ');
+        }
+    }
 }
-?>

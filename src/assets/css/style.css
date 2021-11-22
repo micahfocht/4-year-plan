@@ -54,7 +54,7 @@ h2 {
   font-family: "Roboto", sans-serif;
 }
 p {
-  color: darkgray;
+  color: black;
   font-size: large;
   font-family: "Open Sans", sans-serif;
 }
@@ -298,6 +298,7 @@ img {
   padding: 1rem;
   overflow: hidden;
   height: auto;
+  z-index: 0;
 }
 
 .reusable-card img {

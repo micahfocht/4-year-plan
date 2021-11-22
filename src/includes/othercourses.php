@@ -1,11 +1,13 @@
 <?php
+if(!isset($semester)) return;
+if(!isset($database)) return;
 
 $querysem = oci_parse($database, "select unique e.e_semester from ENROLL e, STUDENT s where e.e_stid = s.s_id and s.s_email = :email");
 oci_bind_by_name($querysem,":email",$email);
 oci_execute($querysem);
-while($semesters = oci_fetch_array($querysem, OCI_ASSOC+OCI_RETURN_NULLS)) {
-    $season = substr($semesters["E_SEMESTER"], -2);
-    if ($season != "SP" && $season != "FA") {
+$curr = $semester;
+/*while($semesters = oci_fetch_array($querysem, OCI_ASSOC+OCI_RETURN_NULLS)) {
+    if ('$semester' == $semesters["E_SEMESTER"] or $semester2 = $semesters["E_SEMESTER"]){
         if(!isset($draw)){
         $draw = true;
         if($draw = true){
@@ -22,7 +24,7 @@ while($semesters = oci_fetch_array($querysem, OCI_ASSOC+OCI_RETURN_NULLS)) {
                                                         and e.e_seccode = c.c_code and e.e_secnum = c.c_num and e.e_catalog = c.c_catalog
                                                         order by e.e_seccode, e.e_secnum");
         oci_bind_by_name($query, ":email", $email);
-        oci_bind_by_name($query, ":semester", $semesters['E_SEMESTER']);
+        oci_bind_by_name($query, ":semester", $semester);
         oci_execute($query);
         while ($code = oci_fetch_array($query, OCI_ASSOC + OCI_RETURN_NULLS)) {
             echo('
@@ -55,12 +57,15 @@ while($semesters = oci_fetch_array($querysem, OCI_ASSOC+OCI_RETURN_NULLS)) {
         }
     }
 }
+
+*/
 $querysem = oci_parse($database, "select unique e.e_semester from ENROLL_MANUAL e, STUDENT s where e.e_stid = s.s_id and s.s_email = :email");
 oci_bind_by_name($querysem,":email",$email);
 oci_execute($querysem);
+$curr = $semester;
+if(!isset($semseter2)) $semester2 = $semester;
 while($semesters = oci_fetch_array($querysem, OCI_ASSOC+OCI_RETURN_NULLS)) {
-    $season = substr($semesters["E_SEMESTER"], -2);
-    if ($season != "SP" && $season != "FA") {
+    if ($semester == $semesters["E_SEMESTER"] or $semester2 == $semesters["E_SEMESTER"]){
         if (!isset($draw)) {
             $draw = true;
             if ($draw = true) {
@@ -110,9 +115,37 @@ while($semesters = oci_fetch_array($querysem, OCI_ASSOC+OCI_RETURN_NULLS)) {
     }
 }
 if(isset($draw) & $draw = true){
+    if(isFuture($semester2)){
+    echo('<form action="./includes/addcourse.php" method="post" id="addcourse">
+                        <div class="row">
+                                    <div class="col-2">
+                                        <label for="seccode" class="formgray">Department Code</label>
+                                        <input type="text" name="seccode" id="seccode" size ="4">
+                                    </div>
+                                    <div class="col-2">
+                                        <label for="secnum" class="formgray">Section Number</label>
+                                        <input type="text" name="secnum" id="secnum" size="4">
+                                    </div>
+                                    <div class="col-2">
+                                        <label for="semester" class="formgray">Semester</label>
+                                        <input type="text" name="semester" id="semester" size="8">
+                                    </div>
+                                    <div class="col-3">
+                                        <label for="coursetitle" class="formgray">Title</label>
+                                        <input type="text" name="coursetitle" id="coursetitle" size="25">
+                                    </div>
+                                    <div class="col-1">
+                                        <label for="credit" class="formgray">Credit</label>
+                                        <input type="text" name="credit" id="credit" size ="2">
+                                    </div>
+                                    <div class="col-2">
+                                        <input type="submit" value="Submit">
+                                    </div>
+                            </div>
+                        </form>');}
 echo('                        </div>
                             </div>
                         </div>
-                    </div>
-                </div>');}
+');
+unset($draw);}
 ?>

@@ -16,7 +16,7 @@ while ($row = oci_fetch_array($query, OCI_ASSOC+OCI_RETURN_NULLS)) {
 }
 if( isset($id) & isset($_POST["seccode"]) & isset($_POST["secnum"]) & isset($_POST["semester"])){
     $query = oci_parse($database, "INSERT INTO ENROLL_MANUAL (E_STID, E_SECCODE, E_SECNUM,E_SEMESTER,E_TITLE, E_CREDIT ) 
-                       VALUES (:stid, :seccode, :secnum, :semester, :title, :credit)");
+                       VALUES (:stid, UPPER(:seccode), :secnum, :semester, :title, :credit)");
     oci_bind_by_name($query, ":stid", $id);
     oci_bind_by_name($query,":seccode", $_POST["seccode"]);
     oci_bind_by_name($query,":secnum", $_POST["secnum"]);
@@ -26,7 +26,7 @@ if( isset($id) & isset($_POST["seccode"]) & isset($_POST["secnum"]) & isset($_PO
     oci_bind_by_name($query,":credit", $_POST["credit"]);
     oci_execute($query);
     echo("Submitted");
-    #header("Location: ../preferences.php");
+    #header("Location: /dashboard.php");
 }
 else{
     echo("Course not set");

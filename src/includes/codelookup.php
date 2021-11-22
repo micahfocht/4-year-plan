@@ -1,8 +1,8 @@
 <?php
-    $query = oci_parse($database, "select unique C_CODE, C_NUM from COURSE order by C_CODE asc");
+    $query = oci_parse($database, "select unique C_NUM from COURSE order by C_NUM asc");
     oci_execute($query);
     oci_fetch_all($query, $code);
-    echo(json_encode($code));
+    (json_encode($code));
 ?>
 
 <script>

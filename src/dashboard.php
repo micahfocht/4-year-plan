@@ -7,6 +7,7 @@ include "./includes/redirect.php";
 include "./includes/header.php";
 include "./includes/main_nav_bar.php";
 include "./includes/creds.php";
+include "./includes/isfuture.php";
 $email = $_SESSION["email"];
 $database = oci_connect($user,$pass,'//csoracle.betheluniversity.edu:1521/orclpdb');
 ?>
@@ -18,7 +19,8 @@ $database = oci_connect($user,$pass,'//csoracle.betheluniversity.edu:1521/orclpd
 
             <?php
             include "./includes/stuinfo.php";
-            $semester = "OTHER"
+            $semester = "TRANSFER";
+            include "./includes/othercourses.php";
             ?>
 
 
@@ -27,7 +29,6 @@ $database = oci_connect($user,$pass,'//csoracle.betheluniversity.edu:1521/orclpd
 <!--            #####################################################-->
 
 <div class="row">
-
             <!-- content 1 -->
                 <div class="col-6">
                     <div class="card reusable-card">
@@ -60,6 +61,11 @@ $database = oci_connect($user,$pass,'//csoracle.betheluniversity.edu:1521/orclpd
 
 
 </div>
+            <?php
+            $semester = "2019WI";
+            $semester2 = "2020SU";
+            include "./includes/othercourses.php";
+            ?>
             <div class="row">
 
                 <!-- content 1 -->
@@ -94,6 +100,11 @@ $database = oci_connect($user,$pass,'//csoracle.betheluniversity.edu:1521/orclpd
 
 
             </div>
+            <?php
+            $semester = "2020WI";
+            $semester2 = "2021SU";
+            include "./includes/othercourses.php";
+            ?>
             <div class="row">
 
                 <!-- content 1 -->
@@ -126,10 +137,52 @@ $database = oci_connect($user,$pass,'//csoracle.betheluniversity.edu:1521/orclpd
                         </div>
                     </div>
                 </div>
+            </div>
+
                 <?php
+                $semester1 = "2021WI";
+                $semester2 = "2022SU";
                 include "./includes/othercourses.php";
                 ?>
+            <div class="row">
 
+                <!-- content 1 -->
+                <div class="col-6">
+                    <div class="card reusable-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Fall 2022</h5>
+                            <div class="row">
+                                <?php
+                                $semester = '2022FA';
+                                include "./includes/coursespast.php";
+                                include "./includes/courseselect.php";
+                                ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-6">
+                    <div class="card reusable-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Spring 2023</h5>
+                            <div class="row">
+                                <?php
+                                $semester = '2023SP';
+                                include "./includes/coursespast.php";
+                                include "./includes/courseselect.php";
+                                ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <?php
+            $semester1 = "2022WI";
+            $semester2 = "2023SU";
+            include "./includes/othercourses.php";
+            ?>
               <!--  <div class="col-2">
                     <div class="card welcome-card">
                         <div class="card-body">

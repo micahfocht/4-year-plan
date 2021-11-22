@@ -21,7 +21,7 @@
         it is only use for development -->
     <link rel="stylesheet" href="./assets/scss_dev/css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+    <link rel="stylesheet" href="./assets/css/autocomplete.css">
 </head>
 
 <body>
