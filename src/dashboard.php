@@ -138,9 +138,8 @@ $database = oci_connect($user,$pass,'//csoracle.betheluniversity.edu:1521/orclpd
                     </div>
                 </div>
             </div>
-
                 <?php
-                $semester1 = "2021WI";
+                $semester = "2021WI";
                 $semester2 = "2022SU";
                 include "./includes/othercourses.php";
                 ?>
@@ -179,7 +178,7 @@ $database = oci_connect($user,$pass,'//csoracle.betheluniversity.edu:1521/orclpd
                 </div>
             </div>
             <?php
-            $semester1 = "2022WI";
+            $semester = "2022WI";
             $semester2 = "2023SU";
             include "./includes/othercourses.php";
             ?>

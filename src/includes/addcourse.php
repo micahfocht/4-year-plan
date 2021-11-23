@@ -26,8 +26,11 @@ if( isset($id) & isset($_POST["seccode"]) & isset($_POST["secnum"]) & isset($_PO
     oci_bind_by_name($query,":credit", $_POST["credit"]);
     oci_execute($query);
     echo("Submitted");
-    #header("Location: /dashboard.php");
+    header("Location: /dashboard.php");
 }
 else{
     echo("Course not set");
+    foreach ($_POST as $key => $value){
+        echo "{$key} = {$value}\r\n";
+    }
 }
