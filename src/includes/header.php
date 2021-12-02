@@ -16,9 +16,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@100&display=swap"
         rel="stylesheet">
-
-    <!-- this link should always be commented out.
-        it is only use for development -->
     <link rel="stylesheet" href="./assets/scss_dev/css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="./assets/css/autocomplete.css">

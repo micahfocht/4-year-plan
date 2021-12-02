@@ -1,5 +1,6 @@
 <?php
-function isFuture($semester){
+function isFuture($semester): bool
+{
     if(!isset($year)) $year = date("Y");
     if(!isset($month)) $month = date("m");
     if ($month < 7){
@@ -8,7 +9,7 @@ function isFuture($semester){
         $curr = "FA";
     }
     if($semester == 'TRANSFER') return true;
-    else if(substr($semester, -2) == "SU"){
+    else if(str_ends_with($semester, "SU")){
         if(intval(substr($semester, 0,4)) > $year){
             return true;
         }else if(intval(substr($semester, 0,4)) == $year && $curr == "SP"){
@@ -16,7 +17,7 @@ function isFuture($semester){
         }else{
             return false;
         }
-    }else if(substr($semester, -2) == "WI"){
+    }else if(str_ends_with($semester, "WI")){
         if(intval(substr($semester, 0,4)) == $year && $curr == "SP"){
             return true;
         }else{

@@ -3,7 +3,7 @@
 <br>
 <hr>
 
-<!-- adding button -->
+<!-- Form to enter courses -->
 <form id=" <?php
     echo "addcourse" . $semester; //This is so that, when this is included multiple times on the same page, each for has a distinct id.
 ?>" action="./includes/addcourse.php" target="hidden-form<?php echo $semester;?>" autocomplete="off" method="post">
@@ -27,12 +27,12 @@
     <div class="col-1">
         <input type="hidden" id="semester" name="semester" value=
 <?php
-        echo ('"' . $semester . '">');
+        echo ('"' . $semester . '">'); #Set the current semester for this box.
 ?>
     </div>
 <div class="col-3">
     <button id="<?php
-    echo "submit" . $semester;
+    echo "submit" . $semester; #unique value
     ?>" class="btn btn-outline-primary btn-lg" type=submit onclick="unwarn()">Submit</button>
 </div>
 </form>
@@ -43,10 +43,10 @@
 <script>
 function warn(){
     window.onbeforeunload = function() {
-        return true;
+        return true; //Warn if a box has data in it.
     };}
 function unwarn(){
-    window.onbeforeunload = null;
+    window.onbeforeunload = null; //Remove the warning and empty the boxes.
     document.getElementById('seccode<?php echo $semester?>').value ="";
     document.getElementById('secnum<?php echo $semester?>').value = "";
 }
@@ -155,7 +155,7 @@ function unwarn(){
 </script>
 <script>
     autocomplete(document.getElementById("<?php
-        echo "seccode" . $semester;
+        echo "seccode" . $semester; #Run the autocomplete code
         ?>"), depts);
     autocomplete(document.getElementById("<?php
         echo "secnum" . $semester;
