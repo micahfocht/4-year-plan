@@ -31,6 +31,7 @@ $database = oci_connect($user,$pass,'//csoracle.betheluniversity.edu:1521/orclpd
 <div class="row">
             <!-- content 1 -->
                 <div class="col-6">
+                    <!-- card used across the pages-->
                     <div class="card reusable-card">
                         <div class="card-body">
                             <h5 class="card-title">Fall 2019</h5>
@@ -83,7 +84,7 @@ $database = oci_connect($user,$pass,'//csoracle.betheluniversity.edu:1521/orclpd
                     </div>
                 </div>
 
-
+<!-- col-6 describes width of the card-->
                 <div class="col-6">
                     <div class="card reusable-card">
                         <div class="card-body">
