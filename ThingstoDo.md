@@ -6,6 +6,8 @@ Major Features to Add
             this table should be color coded so pairs with more conflicts or more important conflicts stand out
      give advisor a way to select specific student's plans to veiw
      add sign in authorization
+     add way to remove planned course from future semester
+     pull full course name and credit hours from database when adding planned course 
  
  Fixes for Current Fetures
     allow for studnets to add courses after their expected graduation date
