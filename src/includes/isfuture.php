@@ -1,6 +1,6 @@
 <?php
 function isFuture($semester): bool
-{
+{#This function doesn't currently work but it's supposed to tell if a semester is in the future or the past.
     if(!isset($year)) $year = date("Y");
     if(!isset($month)) $month = date("m");
     if ($month < 7){

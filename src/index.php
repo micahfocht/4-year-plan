@@ -16,3 +16,5 @@ include "./pages/welcome_page.php";
 include './includes/footer_section.php';
 // include footer
 include "./includes/footer.php";
+
+//Splash page, mostly useless without more info.

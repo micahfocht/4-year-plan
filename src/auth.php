@@ -1,6 +1,6 @@
 <?php
 $user=null;
-$pass=null;
+$pass=null; #This doesn't actually Authenticate, but it checks if the email belongs to a student or not.
 require './includes/creds.php';
 if (isset($_POST['email']) && isset($_POST['password'])) {
     // Create connection

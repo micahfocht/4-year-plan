@@ -22,7 +22,7 @@
                         <li class="nav-item">
                             <?php
                                 if (!isset($_SESSION['Status'])){
-                                    echo '<a class="nav-link" href="./login.php">Sign In';
+                                    echo '<a class="nav-link" href="./login.php">Sign In';#Generate the top bar based on whether the user is logged in or not.
                                 }elseif($_SESSION['Status'] == 'Logged in'){
                                     echo '<a class="nav-link" href="./preferences.php">Preferences</a>';
                                     echo '</li><li class="nav-item">';

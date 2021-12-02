@@ -60,7 +60,7 @@ oci_execute($querysem);
 */
 $querysem = oci_parse($database, "select unique e.e_semester from ENROLL_MANUAL e, STUDENT s where e.e_stid = s.s_id and s.s_email = :email");
 oci_bind_by_name($querysem,":email",$email);
-oci_execute($querysem);
+oci_execute($querysem); #this is a mess, but it seems to be working.  It loads the courses for a user and only displays the bar if data is there.
 $draw = false;
 
 if(!isset($semseter2)){ $semester2 = $semester;}

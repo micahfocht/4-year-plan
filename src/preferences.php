@@ -9,6 +9,7 @@ include "./includes/main_nav_bar.php";
 include "./includes/creds.php";
 $email = $_SESSION["email"];
 $database = oci_connect($user,$pass,'//csoracle.betheluniversity.edu:1521/orclpdb');
+#This page is no longer used.
 ?>
 <div class="general-container">
     <div class="container-fluid dashboard">

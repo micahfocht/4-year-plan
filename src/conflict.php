@@ -9,4 +9,4 @@ include './pages/conflict_page.php';
 // footer start
 // include footer section
 include './includes/footer_section.php';
-include "./includes/footer.php";
+include "./includes/footer.php";#This file was never finished.

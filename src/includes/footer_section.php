@@ -25,7 +25,7 @@
                 &nbsp;
             </div>
             <div class="col footer-section__right-div">
-                <p>Bethel University &copy; <?php echo date('Y'); ?></p>
+                <!--<p>Bethel University &copy; <?php echo date('Y'); ?></p>-->
             </div>
 
         </div>
