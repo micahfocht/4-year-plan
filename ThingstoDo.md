@@ -9,5 +9,5 @@ Major Features to Add
  
  Fixes for Current Fetures
     allow for studnets to add courses after their expected graduation date
-    generate semesters based on database (currently ard coded in)
+    generate semesters based on database (currently hard coded in)
     remove preferences page
