@@ -194,7 +194,6 @@ $database = oci_connect($user,$pass,'//csoracle.betheluniversity.edu:1521/orclpd
 
 
         </div>
-        </div>
     </div>
 
 <?php
