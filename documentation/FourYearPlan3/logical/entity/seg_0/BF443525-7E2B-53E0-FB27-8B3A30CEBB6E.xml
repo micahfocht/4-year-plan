@@ -1,0 +1,125 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="BF443525-7E2B-53E0-FB27-8B3A30CEBB6E" name="Course">
+<createdBy>Zach</createdBy>
+<createdTime>2021-09-22 06:04:31 UTC</createdTime>
+<ownerDesignName>FourYearPlan</ownerDesignName>
+<engineerTo>
+<item key="EAF6748F-4F82-593E-2DFD-F4E6D0486E39" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="course_name" id="3F891CB9-0CD4-E366-6AD4-8FE68ACF9D45">
+<createdBy>zachary.hess</createdBy>
+<createdTime>2021-10-28 18:25:40 UTC</createdTime>
+<ownerDesignName>FourYearPlan</ownerDesignName>
+<engineerTo>
+<item key="EAF6748F-4F82-593E-2DFD-F4E6D0486E39" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="course_code" id="51B2299F-2B49-E9A1-2C2C-F3FEA36DB62E">
+<createdBy>Zach</createdBy>
+<createdTime>2021-09-22 06:04:57 UTC</createdTime>
+<ownerDesignName>FourYearPlan</ownerDesignName>
+<engineerTo>
+<item key="EAF6748F-4F82-593E-2DFD-F4E6D0486E39" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>3</dataTypeSize>
+<ownDataTypeParameters>3,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="course_title" id="D4DB40CB-44B7-D0E0-DF4B-959CC8B4CD12">
+<createdBy>Zach</createdBy>
+<createdTime>2021-09-22 06:04:38 UTC</createdTime>
+<ownerDesignName>FourYearPlan</ownerDesignName>
+<engineerTo>
+<item key="EAF6748F-4F82-593E-2DFD-F4E6D0486E39" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="credit_hours_max" id="A5C03DE6-ABD6-7F50-4F0A-30ACB03EC8D7">
+<createdBy>Zach</createdBy>
+<createdTime>2021-09-22 06:06:24 UTC</createdTime>
+<ownerDesignName>FourYearPlan</ownerDesignName>
+<engineerTo>
+<item key="EAF6748F-4F82-593E-2DFD-F4E6D0486E39" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="credit_hours_min" id="CDBB0FA6-8AED-904E-C973-71C51DD74D99">
+<createdBy>Zach</createdBy>
+<createdTime>2021-10-28 17:04:52 UTC</createdTime>
+<ownerDesignName>FourYearPlan</ownerDesignName>
+<engineerTo>
+<item key="EAF6748F-4F82-593E-2DFD-F4E6D0486E39" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="e_id" id="110A1C1C-DC78-9A00-6D50-7AD23416E3D9">
+<createdBy>zachary.hess</createdBy>
+<createdTime>2021-10-28 18:55:02 UTC</createdTime>
+<generatorID>166D00B8-5901-3F72-DF6D-2FEAA5E99099</generatorID>
+<ownerDesignName>FourYearPlan</ownerDesignName>
+<engineerTo>
+<item key="EAF6748F-4F82-593E-2DFD-F4E6D0486E39" value="true"/>
+</engineerTo>
+<referedAttribute>7DB8BB39-DD5D-01F6-D503-2D97CCF9E8FE</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="section_num" id="AE8A47CC-E278-12CF-CB6E-5B2B8FB2FE2C">
+<createdBy>zachary.hess</createdBy>
+<createdTime>2021-10-28 19:07:38 UTC</createdTime>
+<ownerDesignName>FourYearPlan</ownerDesignName>
+<engineerTo>
+<item key="EAF6748F-4F82-593E-2DFD-F4E6D0486E39" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="B8898AF4-4285-F029-8E7A-C04888BDB134" name="Course PK">
+<createdBy>Zach</createdBy>
+<createdTime>2021-10-21 06:29:24 UTC</createdTime>
+<ownerDesignName>FourYearPlan</ownerDesignName>
+<engineerTo>
+<item key="EAF6748F-4F82-593E-2DFD-F4E6D0486E39" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>51B2299F-2B49-E9A1-2C2C-F3FEA36DB62E</attributeRef>
+<attributeRef>3F891CB9-0CD4-E366-6AD4-8FE68ACF9D45</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

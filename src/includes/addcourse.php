@@ -1,6 +1,6 @@
 <?php
 session_start();
-include './includes/redirect.php';
+include './redirect.php';
 $user = null;
 $pass = null;
 include "./creds.php";
@@ -14,19 +14,23 @@ while ($row = oci_fetch_array($query, OCI_ASSOC+OCI_RETURN_NULLS)) {
         $id = $item;
     }
 }
-if( isset($id) & isset($_POST["seccode"]) & isset($_POST["secnum"]) & isset($_POST["semester"]) & isset($_POST["coursetitle"]) & isset($_POST["credit"])){
+if( isset($id) & isset($_POST["seccode"]) & isset($_POST["secnum"]) & isset($_POST["semester"])){
     $query = oci_parse($database, "INSERT INTO ENROLL_MANUAL (E_STID, E_SECCODE, E_SECNUM,E_SEMESTER,E_TITLE, E_CREDIT ) 
-                       VALUES (:stid, :seccode, :secnum, :semester, :title, :credit)");
+                       VALUES (:stid, UPPER(:seccode), :secnum, :semester, :title, :credit)");
     oci_bind_by_name($query, ":stid", $id);
     oci_bind_by_name($query,":seccode", $_POST["seccode"]);
     oci_bind_by_name($query,":secnum", $_POST["secnum"]);
     oci_bind_by_name($query,":semester", $_POST["semester"]);
+
     oci_bind_by_name($query,":title", $_POST["coursetitle"]);
     oci_bind_by_name($query,":credit", $_POST["credit"]);
     oci_execute($query);
     echo("Submitted");
-    #header("Location: ../preferences.php");
+    header("Location: /dashboard.php");
 }
 else{
     echo("Course not set");
+    foreach ($_POST as $key => $value){
+        echo "{$key} = {$value}\r\n";
+    }
 }
