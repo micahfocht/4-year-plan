@@ -1,8 +1,0 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="FourYearPlan" id="D3F8455D-615F-D050-2EFF-CE6EBB99DCE8" version="3.5">
-<createdBy>Zach</createdBy>
-<createdTime>2021-09-21 00:21:12 UTC</createdTime>
-<ownerDesignName>FourYearPlan</ownerDesignName>
-<capitalNames>false</capitalNames>
-<designId>D3F8455D-615F-D050-2EFF-CE6EBB99DCE8</designId>
-</OSDM_Design>
