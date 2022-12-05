@@ -1,0 +1,50 @@
+/* Style login form */
+form {
+    width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.course {
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    }
+/* Style the login form elements */
+label, input {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+}
+input[type="text"], input[type="password"] {
+    padding: 8px;
+    font-size: 16px;
+}
+input[type="submit"] {
+    padding: 8px;
+    font-size: 16px;
+    background-color: #1c3199;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #4c6dc0;
+}
+input[name="dept"],input[name="code"],input[name="cred"] {
+    display: inline;
+    margin-bottom: 10px;
+    width: 20%;
+    padding: 5px;
+}
+#course {
+    display: inline;
+    margin-bottom: 10px;
+    width: 20%;
+}
+p[name=error] {
+    color:red;
+}
