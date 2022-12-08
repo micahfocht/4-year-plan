@@ -5,9 +5,10 @@
         <link rel="stylesheet" href="/includes/style.css">
     </head>
     <body>
+      <br><br>
       <!-- HTML form for the login page -->
       <form method="post" id="login">
-        <label for="username">Username:</label>
+        <label for="username">Email:</label>
         <input type="text" name="username" id="username">
         <label for="password">Password:</label>
         <input type="password" name="password" id="password">
@@ -19,7 +20,7 @@ session_start();
 // Check if the user is already logged in
 if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
   // Redirect the user to the protected page
-  header('Location: /test.php');
+  header('Location: /dashboard.php');
   exit;
 }
 // Check if the form has been submitted
@@ -28,12 +29,12 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
   $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
   $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
   // Check the submitted username and password against a database or user list
-  if ($username == 'student' && $password == 'password') {
+  if ($username != null && $password == 'password') {
     // Set a session variable to indicate that the user is logged in
     $_SESSION['logged_in'] = true;
     $_SESSION['user'] = $username;
     // Redirect the user to the protected page
-    header('Location: /test.php');
+    header('Location: /dashboard.php');
     exit;
   }elseif ($username == 'professor' && $password == 'password') {
     // Set a session variable to indicate that the user is logged in

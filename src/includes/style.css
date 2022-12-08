@@ -3,15 +3,7 @@ form {
     width: 400px;
     margin: auto;
     padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
 }
-.course {
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    }
 /* Style the login form elements */
 label, input {
     display: block;
@@ -25,11 +17,12 @@ input[type="text"], input[type="password"] {
 input[type="submit"] {
     padding: 8px;
     font-size: 16px;
-    background-color: #1c3199;
+    background-color: #025ca6;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
+    display: block;
 }
 input[type="submit"]:hover {
     background-color: #4c6dc0;
@@ -37,9 +30,7 @@ input[type="submit"]:hover {
 input[name="dept"],input[name="code"],input[name="cred"] {
     display: inline;
     margin-bottom: 10px;
-    width: 20%;
-    padding: 5px;
-}
+    width: 18%;}
 #course {
     display: inline;
     margin-bottom: 10px;
@@ -47,4 +38,24 @@ input[name="dept"],input[name="code"],input[name="cred"] {
 }
 p[name=error] {
     color:red;
+}
+.major {
+    color:rgb(70, 70, 70);
+    text-align: left;
+}
+.name {
+    color:rgb(70, 70, 70);
+    text-align: right;
+}
+body {
+    background-color: #025ca6;
+}
+.col-sm-1{
+    background-color: #025ca6;
+}
+div {
+    background-color: white;
+}
+#login{
+    background-color: white;
 }

@@ -1,5 +1,4 @@
 <?php
-
 // Start a session
 session_start();
 
@@ -7,6 +6,7 @@ session_start();
 if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
   // Unset the session variable to log out the user
   unset($_SESSION['logged_in']);
+  unset($_SESSION['user']);
 }
 // Redirect the user to the login page
 header('Location: /index.php');

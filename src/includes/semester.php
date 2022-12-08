@@ -24,7 +24,7 @@
                     $credmax += intval($row['C_MAX']);
                 }
                 if ($credmax == $credmin){
-                    echo('<li class="list-group-item">' . $credmin . " Credits Total</li>");
+                    echo('<br><h6>' . $credmin . " Credits Total</h6>");
                 }
                 else{
                     echo('<br><h6>' . $credmin . " to " . $credmax . " Credits Total</h6>");
