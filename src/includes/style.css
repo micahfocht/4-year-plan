@@ -59,3 +59,6 @@ div {
 #login{
     background-color: white;
 }
+th, td {
+    padding: 15px;
+}
